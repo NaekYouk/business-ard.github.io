@@ -11,6 +11,8 @@
 
  $(window).on("scroll", function() {
     scrollOffset = $(this).scrollTop();
+    $(".nav-toggle").removeClass("active");
+    $(".nav").removeClass("active");
     checkScroll(scrollOffset);
  });
 
