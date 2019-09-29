@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="canvasBall"></canvas>
+    <style>
+    body {
+        margin: 0;
+    }
+    #canvasBall {
+        
+        display: block;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    </style>
+
+    <script>
+
+    let canvasBall = document.getElementById("canvasBall");
+    let ctxBall = canvasBall.getContext("2d");
+
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function resizeCanvas() {
+            canvasBall.width = window.innerWidth;
+            canvasBall.height = window.innerHeight;
+            drawStuff(); 
+    }
+    resizeCanvas();
+
+    function drawStuff() {
+
+    function Ball() {
+
+        this.circleBall = function(x, y, radius, fillCircle){
+            ctxBall.beginPath();
+            ctxBall.arc(x, y, radius, 0, Math.PI * 2, false);
+            if (fillCircle) {
+                ctxBall.fill(); //заливаем то шо внутри
+            } else {
+            ctxBall.stroke();   //рисует контур
+            }
+        };
+        
+        this.pickRandomWord = function () {
+            colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+            return colors[Math.floor(Math.random() * colors.length)];
+            
+        };
+
+        this.draw = function(){
+            ctxBall.lineWidth = 2;
+            ctxBall.strokeStyle = "Black";
+            ctxBall.fillStyle = this.color;
+            this.circleBall(this.x, this.y, 8, true);
+            this.circleBall(this.x, this.y, 8, false);
+        }
+
+        this.move = function(){
+            this.x += this.xSpeed;
+            this.y += this.ySpeed;
+        }
+
+        this.checkCollision = function(){
+            if (this.x > w-11 || this.x < 11)
+                this.xSpeed = -this.xSpeed;
+            if (this.y > h-11    || this.y < 11)
+                this.ySpeed = -this.ySpeed;
+        }
+
+        this.x = w/2;
+        this.y = h/2;
+        this.xSpeed = -5 + Math.random() * 10;
+        this.ySpeed = -5 + Math.random() * 10;
+        this.color = this.pickRandomWord(); 
+    };
+        let w = canvasBall.width;
+        let h = canvasBall.height;
+        let ball = [];
+        for (let i = 0; i < 100; i++) {
+            ball.push(new Ball());
+            
+        }
+
+
+        let timerId = setInterval(() => {
+            ctxBall.clearRect(0, 0, 0, 0);
+            for (let i = 0; i < 100; i++) {
+                ball[i].draw();
+                ball[i].move();
+                ball[i].checkCollision();
+                
+            }
+            ctxBall.strokeRect(0, 0, w, h);
+        }, 20);
+
+        // setTimeout(() => {clearInterval(timerId)}, 1400);
+    }
+
+    </script>
+</body>
+</html>

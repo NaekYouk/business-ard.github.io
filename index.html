@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Domine|Indie+Flower&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/projects/PazzleStyle.css">
+    <title>Site</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">Vladislav</div>
+    
+                <nav class="nav">
+                    <a class="nav__link" href="#" data-scroll="#Biography">Biography</a>
+                    <a class="nav__link" href="#" data-scroll="#Project">Project</a>
+                    <a class="nav__link" href="#" data-scroll="#Contact">Contact</a>
+                </nav>
+                <div class="nav__ellipse"></div>
+                <div class="nav-toggle">
+                    <span class="nav-toggle__item"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Intro_Img_Info -->
+    <div class="intro" id = "intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__text">
+    
+                    <p>Hello my name is Vladislav Ustinovich and I want to introduce you to my business card site</p>
+                    <p>Here you can find my biography and my projects</p>
+                    <p>Good luck!</p>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Biography -->
+    <a id="Biography"></a>
+    <section class="section">  
+        <div class="container">
+            <div class="section__inner">
+                <h2 class = "section__header">Biography</h2>
+                <div class="section__item">
+                    <p class = "section__text">Hello, my name is Vladislav, I'm 20 and i live in Minsk</p>
+                    <p class = "section__text">I was born in Orsha, graduated from high school and and entered the Sakharov Institute</p>
+                    <p class = "section__text">Сurrently studying in the third year and love in free time develop various projects and develop comprehensively</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project -->
+    <a id = "Project"></a>
+       <section class="section-project">  
+            <div class="container">
+                <div class="section__inner">
+                    <h2 class = "section__header">Project</h2>
+                        <div class="project__items">
+                                <div class="project__item">
+                                        
+                                        <div class="project__img">
+                                            <a href="./assets/projects/Snake.html" target="_blank">
+                                            <img src="assets/images/Projects/Snake.png" alt="" class="pr_img active">
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="project__text">Snake</div>
+                                </div>
+    
+                                <div class="project__item">
+                                        
+                                        <div class="project__img">
+                                            <a href="javascript:startPuzzle()">
+                                            <img src="assets/images/Projects/puzzle.png" alt="" class="pr_img active">
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="project__text">Puzzle</div>
+                                </div>
+
+                                <div class="project__item">
+                                    <div class="project__img">
+                                    <a href="./assets/projects/Fireworks.html" target="_blank">
+                                        <img src="assets/images/Projects/Fireworks.png" alt="" class="pr_img active">
+                                    </a>
+                                    </div>
+                                    
+                                    <div class="project__text">Fireworks</div>
+                                </div> 
+
+                        </div>
+
+
+                        <div class="game" visibility: hidden>
+                            <div class="grid">
+                
+                            </div>
+                
+                            <div class="menu">
+                                    <button class="mix">Mix</button>
+                                    <div class="close"></div>
+                                    <div class="steps">steps: 0</div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+            <div class="message" visibility: hidden>
+                <div class="message-content">
+                    <div class="message-text">Congratulations you WIN!</div>
+                    <i class="far fa-check-circle"></i>
+                    <div class="message-button">Ok</div>
+                </div>
+            </div>
+    </section>
+    <!-- Contact -->
+    <a id = "Contact"></a>
+    <section class="section-contact">
+        <div class="container">
+            <div class="section__inner">
+                <h2 class = "section__header">Contact</h2>
+                <div class="contact__items">
+    
+                    <div class="contact__item">
+                            <p>Telephone</p>
+                            <p><b>+375(33)307 74 28</b></p>
+                    </div>
+    
+                    <div class="contact__item">
+                            <p>Mail</p>
+                            <p><b>vladislavustinovich1999@gmail.com</b></p>
+                    </div>
+    
+                    <div class="contact__item">
+                        <div class="contact__social">
+                            <p>Social</p>
+                            <div class="contact__img">
+                                <a href="https://t.me/Vladislav0703">
+                                    <i class="fab fa-telegram-plane"></i></a>
+                                <a href="https://vk.com/xzibiet">
+                                    <i class="fab fa-vk"></i></a>
+                                <a href="mailto:vladislavustinovich1999@gmail.com">
+                                    <i class="fas fa-envelope"></i></a>    
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div> 
+    </section>
+    
+    <footer class="footer">
+    <p>06.09.2019</p>
+    </footer>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/projects/Puzzle.js"></script>
+
+
+</body>
+</html>

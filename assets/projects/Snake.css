@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: #2b3d5b;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#canvas {
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, #ffccff 0%, #ccffff 100%);
+
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#score {
+    display: block;
+    border: 10px solid gray;
+    color: #ffffff;
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#message {
+    position: absolute;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 5px rgba(51, 153, 51, 0.5);
+}

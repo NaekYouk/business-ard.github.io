@@ -1,0 +1,229 @@
+/* body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background-color: #2b3d5b;
+    text-align: center;
+} */
+
+.game{
+    /* position: absolute; */
+    /* left: 50%; */
+    /* top: 50%; */
+    position: relative;
+    margin: 20px auto;
+    width: 440px;
+    z-index: 10000;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgb(255, 164, 243);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 110px 110px 110px 110px;
+    grid-template-rows: 110px 110px 110px 110px;
+}
+
+.grid-button {
+    user-select: none;
+    color: #000000;
+    background-color: #ffe6f7;
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    margin: 2px;
+}
+/* control buttons */
+.menu{
+    display: flex;
+}
+/* Close */
+.close {
+    height: 60px;
+    margin: 0 auto;
+    opacity: 0.3;
+    padding: 0 22px 0 20px;
+    transition: .3s linear;
+}
+.close:hover {
+    opacity: 1; 
+}
+.close:before, .close:after {
+    position: absolute;
+    margin: 5px auto;
+    content: ' ';
+    height: 50px;
+    width: 5px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+/* mix */
+.mix{
+    position: absolute;
+    left: 2px;
+    margin-top: 10px;
+    width: 106px;
+    height: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    background-color: #ffe6f7;
+    transition: .3s linear;
+}
+
+.mix:hover{
+    text-shadow: 0 0 1px rgba(0,0,0,0.9);
+}
+
+/* steps */
+.steps{
+    position: absolute;
+    color: #000;
+    margin-top: 3.5px;
+    font-size: 36px;
+    right: 2px;
+    transition: .3s linear;
+}
+
+.steps:hover{
+    text-shadow: 0 0 1px rgba(0,0,0,0.9);
+}
+/* Message */
+.message{
+    width:100%;
+    min-height:100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position: fixed;
+    z-index: 10000;
+    top:0px;
+}
+.message .message-content{
+    display: flex;
+    flex-direction: column;
+    margin: 240px auto;
+    /* align-items: center; */
+    width:350px;
+    height: 180px;
+    padding: 10px;
+    background-color: #c5c5c5;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.message-text{
+    font-size: 25px;
+    font-weight: 800;
+    color: #000;
+}
+
+.fa-check-circle{
+    font-size: 40px; 
+    padding: 10px 0;
+    color: #339966;
+    font-weight: 800;
+}
+
+.message-button{
+    width: 50px;
+    margin: 15px auto;
+    background-color: #fff;
+    user-select: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    font-size: 20px;
+    color: #000;
+    font-weight: 800;
+    
+}
+
+
+
+@media (max-width: 769px ) {
+    .game{
+        width: 360px;
+    }
+
+    .grid {
+        grid-template-columns: 90px 90px 90px 90px;
+        grid-template-rows: 90px 90px 90px 90px;
+    }
+
+    .grid-button {
+        font-size: 40px;
+    }
+
+    .mix{
+        margin-top: 10px;
+        width: 86px;
+        height: 35px;
+        font-size: 23px;
+    }
+
+    .close {
+        height: 50px;
+        padding: 0 22px 57px 20px;
+    }
+
+    .steps{
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 400px ) {
+    .game{
+        width: 288px;
+    }
+
+    .grid {
+        grid-template-columns: 72px 72px 72px 72px;
+        grid-template-rows: 72px 72px 72px 72px;
+    }
+
+    .grid-button {
+        font-size: 37px;
+    }
+
+    .mix{
+        margin-top: 10px;
+        width: 69px;
+        height: 32px;
+        font-size: 20px;
+    }
+    .close:before, .close:after {
+        margin: 7px auto;
+        height: 40px;
+        width: 4px;
+    }
+
+    .steps{
+        font-size: 27px;
+        margin-top: 5px;
+    }
+/* message */
+.message .message-content{
+    margin: 240px auto;
+    width: 280px;
+    height: 150px;
+}
+
+.message-text{
+    font-size: 22px;
+}
+
+.fa-check-circle{
+    font-size: 35px; 
+    padding: 5px 0;
+}
+
+.message-button{
+    width: 50px;
+    margin: 10px auto;
+}
+
+}
