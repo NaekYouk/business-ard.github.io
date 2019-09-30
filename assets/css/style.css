@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 16px;
     height: 16px;
-
+    padding: 2px 25px 25px 2px;
     border-top: 2px solid #ccc;
     border-left: 2px solid #ccc;
 }
