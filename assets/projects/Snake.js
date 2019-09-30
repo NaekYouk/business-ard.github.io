@@ -1,12 +1,20 @@
+let size = window.innerHeight < window.innerWidth ? window.innerHeight : window.innerWidth;
+size = (Math.floor(size/100))*100;
+size -= 100;
+// if (size & 1)
+//     size+=10;
+$('body').prepend("<canvas id="+'canvas'+" width="+size+" height="+size+"></canvas>");
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 let width = canvas.width;
 let height = canvas.height;
-//Делим игровое поле на 10-пиксельную сетку
-let blockSize = 20;
-let widthInBlocks = width / blockSize;
-let heightInBlocks = height / blockSize;
+
+
+//Делим игровое поле на N-пиксельную сетку
+let blockSize = Math.floor(size/25);
+let widthInBlocks = Math.floor(width / blockSize);
+let heightInBlocks =Math.floor(height / blockSize);
 
 let score = 0;
 //Рисуем рамку
@@ -27,9 +35,11 @@ let gameOver = () => {
     ctx.fillStyle = "Black";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Game Over", width / 2, height / 2);
-    setTimeout(() => {location.reload();}, interval);
-    
+    $('.message-score').text('Score: ' + score);
+    $('.message').fadeIn(1000);
+    $('.message-content').fadeIn(1400); 
+    interval = 1000000;
+
 }
 
 // Рисуем окружность
@@ -116,8 +126,8 @@ function Snake() {
             }while(flag);   
 
             //наращиваем скорость
-            if (score > intervalScore){
-                intervalScore += 20;
+            if (score >= intervalScore){
+                intervalScore += 10;
                 interval -= 10;
             }
         } else {
@@ -183,7 +193,6 @@ $("body").keydown(function (event) {
         snake.setDirection(newDirection);
     }
 });
-
 // SWIPE
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
@@ -232,19 +241,30 @@ function handleTouchMove(evt) {
 };
 
 
+
 let snake = new Snake();
 let apple = new Apple();
-let interval = 110;
+let interval = 120;
 let intervalScore = 10;
 // Запускаем функцию анимации через setInterval
 function gameLoop() {
     ctx.clearRect(0, 0, width, height);
-    drawScore();
+    drawScore();    
     snake.move();
     snake.draw();
     apple.draw();
     drawBorder();
     setTimeout(gameLoop, interval);
 };
+
+$(document).delegate('.message-button', 'click', function () {
+    location.reload();
+});
+
+{/* <canvas id="canvas" width="650" height="650"></canvas> */}
+
+
+
+
 gameLoop();
 
