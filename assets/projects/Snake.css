@@ -3,6 +3,7 @@ body {
     font-family: 'Indie Flower', cursive;
     background-color: #2b3d5b;
     user-select: none;
+    overflow: hidden;
 }
 
 a {
