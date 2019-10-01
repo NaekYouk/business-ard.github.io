@@ -38,22 +38,18 @@
       $("html, body").animate({
          scrollTop: blockOffset+1
       }, 1000);
-      $(".nav").slideUp();
-      // $(".nav").slideDown();
       $(".nav-toggle").removeClass("active");
       $(".nav").removeClass("active");
       
     });
 
      $(".nav-toggle").click(function(event) {
-      if (screen.width < 883){
       event.preventDefault();
       $(".nav").slideDown();
       if ($("*").is(".nav.active") == true)
       $(".nav").slideUp();
       $(this).toggleClass("active");
       $(".nav").toggleClass("active");
-      }
    });
   
      if (screen.width < 883){
