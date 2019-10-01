@@ -46,12 +46,14 @@
     });
 
      $(".nav-toggle").click(function(event) {
+      if (screen.width < 883){
       event.preventDefault();
       $(".nav").slideDown();
       if ($("*").is(".nav.active") == true)
       $(".nav").slideUp();
       $(this).toggleClass("active");
       $(".nav").toggleClass("active");
+      }
    });
   
      if (screen.width < 883){
