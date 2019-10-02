@@ -38,11 +38,10 @@
       $("html, body").animate({
          scrollTop: blockOffset+1
       }, 1000);
-      if ($("*").is(".nav.active") == true){
+      if (screen.width < 770)
       $(".nav").slideUp();
       $(".nav-toggle").removeClass("active");
       $(".nav").removeClass("active");
-      }
     });
 
      $(".nav-toggle").click(function(event) {
