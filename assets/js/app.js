@@ -38,7 +38,8 @@
       $("html, body").animate({
          scrollTop: blockOffset+1
       }, 1000);
-     if ($("*").is(".nav.active") == true){
+      if ($("*").is(".nav.active") == true){
+      $(".nav").slideUp();
       $(".nav-toggle").removeClass("active");
       $(".nav").removeClass("active");
       }
