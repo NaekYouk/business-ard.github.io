@@ -140,6 +140,7 @@ $(document).delegate('.close', 'click', function(){
     startFlag = true;
     grid.empty();
     steps = 0;
+    flag = false;
     $('.steps').text('steps: '+steps);
  });  
 
@@ -150,5 +151,6 @@ $(document).delegate('.close', 'click', function(){
     startFlag = true;
     grid.empty();
     steps = 0;
+    flag = false;
     $('.steps').text('steps: '+steps);
  });  
