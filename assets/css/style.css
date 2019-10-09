@@ -5,6 +5,7 @@ body {
     color: #333;
     /* font-family: 'Domine', serif; */
     font-family: 'Cinzel', serif;
+    /* overflow: hidden; */
     /* font-family: 'Indie Flower', cursive; */
     /* font-family: 'Dancing Script', cursive; */
 }
@@ -103,7 +104,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__link.active {
     color: #a69878;
-    text-shadow: 0 0 5px #000000;
 }
 
 .nav__link:hover:after,
@@ -301,11 +301,9 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-size: 0;
     color: transparent;
-
     border: 0;
     background: none;
     cursor: pointer;
-
     position: absolute;
     top: 40%;
     z-index: 1;
@@ -314,6 +312,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .slick-arrow:focus {
     outline: 0;
+    
 }
 
 .slick-arrow:after {

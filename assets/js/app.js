@@ -39,16 +39,18 @@
          scrollTop: blockOffset+1
       }, 1000);
       if (screen.width < 770)
-      $(".nav").slideUp();
+         $(".nav").slideUp();
       $(".nav-toggle").removeClass("active");
       $(".nav").removeClass("active");
+
+      
     });
 
      $(".nav-toggle").click(function(event) {
       event.preventDefault();
       $(".nav").slideDown();
       if ($("*").is(".nav.active") == true)
-      $(".nav").slideUp();
+         $(".nav").slideUp();
       $(this).toggleClass("active");
       $(".nav").toggleClass("active");
    });
