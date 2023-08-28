@@ -1,1 +1,1 @@
-# https://naekyouk.github.io/businessCard.github.io/
+# https://uladzislau-ustsinovich.github.io/businessCard.github.io/
